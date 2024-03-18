@@ -9,3 +9,6 @@ PORT = 8000
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 REDIS_DB = 0
+
+# 黑边检测阈值配置
+BLACK_EDGE_THRESHOLD = 10

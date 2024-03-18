@@ -1,6 +1,7 @@
 # edge_detector.py
 import cv2
 import numpy as np
+from config import BLACK_EDGE_THRESHOLD
 
 def detect_black_edges(video_path):
     """
@@ -30,5 +31,5 @@ def detect_black_edges(video_path):
     # 计算方差
     variance = np.var(frames_variance)
     
-    # 如果方差小于某个阈值，则认为检测到黑边
-    return variance < 10  # 假设阈值
+    # 如果方差小于配置的阈值，则认为检测到黑边
+    return variance < BLACK_EDGE_THRESHOLD
